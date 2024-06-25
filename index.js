@@ -13,8 +13,10 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .catch(err => console.log(err));
 
 const chatRoutes = require('./routes/chat');
+const voteRoutes = require('./routes/vote')
 
 app.use('/chat', chatRoutes);
+app.use('/vote', voteRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

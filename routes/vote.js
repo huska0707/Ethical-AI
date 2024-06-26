@@ -4,4 +4,4 @@ const router = express.Router();
 
 router.post('/', createVote);
 
-modoule.exports = router;
+module.exports = router;

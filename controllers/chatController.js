@@ -3,7 +3,7 @@ const Chat = require('../models/Vote');
 
 const detectHateSpeech = async (text) => {
     const response = await axios.post(
-        'https://api-inference.huggingface.co/models/your-llm-model',
+        'https://api-inference.huggingface.co/models/llm-model',
         { inputs: text },
         { headers: { Authorization: `Bearer ${process.env.HUGGING_FACE_API_TOKEN}` } }
     );
